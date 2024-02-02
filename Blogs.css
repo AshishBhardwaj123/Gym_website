@@ -1,0 +1,566 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;*/
+    padding-top: 0px;
+    padding-left: 2%;
+    padding-right: 5%;
+    background-color: #524D4D;
+    justify-content: right;
+}
+
+.gymlogo img {
+    height: 190px;
+    margin-top: 17px;
+    z-index: 999;
+    opacity: 200;
+}
+
+.gymlogo {
+    flex: 1;
+    /* The left content takes up all available space */
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav a {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0 25px;
+    color: rgb(250, 246, 246);
+    text-decoration: none;
+    position: relative;
+}
+
+svg
+{
+     display: none;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+nav a::after {
+    content: ''; /* Use a valid content value */
+    width: 0;
+    height: 3px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.2s linear;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+.button {
+    background: orange;
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+.modal 
+ {
+     display: none;
+     position: fixed;
+     top: 70px;
+     left: 450px;
+     width: 50%;
+     height: 100%;
+     z-index: 1;
+     
+ }
+
+ .modal-content {
+     display: flex;
+     flex-direction: column;
+     margin-top: 60px;
+     padding-top: 50px;
+     width: 30%;
+     background: #FFA500;
+     border-radius: 2px;
+     position: fixed;
+     margin-left: 180px;
+ }
+
+ .modal h2 {
+    font-size: 30px;
+     width: 100%;
+     height: 60px;
+     background-color: #4D4848;
+     margin-bottom: 20px;
+     padding: 10px 300px;
+     color: #FFF;
+     /* Add margin below the header */
+ }
+
+
+ .modal-content label {
+     padding-left: 20px;
+     padding-top: 0px;
+ }
+
+ .check {
+     width: 90%;
+     height: 50px;
+     padding-top: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     text-align: left;
+     gap: 0;
+ }
+
+ .check2 {
+     padding-top: 10px;
+     display: flex;
+ }
+
+ .check3 {
+     display: flex;
+ }
+
+ .modal-content .check input {
+     width: 50px;
+     height: 15px;
+     padding: 0;
+     margin: 0;
+ }
+
+ .modal-content .check2 input {
+     width: 50px;
+     height: 15px;
+     padding: 10px 0px;
+     margin: 0;
+ }
+
+ .modal-content .check3 input {
+     width: 50px;
+     height: 10px;
+     padding: 0;
+     margin: 0;
+ }
+
+ .modal-content .lab {
+     text-align: left;
+     padding-right: 20px;
+     padding-top: 0;
+ }
+
+
+ .modal-content input {
+     margin-bottom: 10px;
+     top: 100px;
+     width: 90%;
+     padding: 8px;
+     margin-left: 18px;
+     display: inline-block;
+     border: 1px solid #636161;
+     box-sizing: border-box;
+ }
+
+ .buyplan-btn
+ {
+     fill: #8D8383;
+     stroke-width: 2px;
+     stroke: #000;
+     color: #000;
+     border-radius: 5px;
+     float: right;
+     padding: 8px 15px;
+     font-size: 20px;
+ }
+
+ .close-btn {
+     background: hsl(138, 90%, 49%);
+     color: white;
+     border-radius: 5px;
+     float: right;
+     padding: 7px 18px;
+     width: 100px;
+     margin-left: 100px;
+
+ }
+
+
+.blogs {
+    top: 50px;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(255, 165, 0, 0.50);
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogs img {
+    margin-left: 60px;
+    padding-top: 60px;
+}
+
+.blog-para {
+    margin-top: 40px;
+    width: 50%;
+    height: 300px;
+}
+
+.blog-para p {
+
+
+    padding: 25px 40px;
+    margin-right: 70px;
+    color: #000;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.blog2 {
+    top: 650px;
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+}
+
+.blog2-inner {
+    margin-top: 100px;
+    height: 400px;
+    width: 80%;
+    margin-left: 12%;
+    background-color: #D9D9D9;
+    position: absolute;
+    /* Change to relative to allow positioning child elements */
+    overflow: hidden;
+    /* Clearfix for floated elements inside */
+}
+
+.blog2-inner img {
+    float: right;
+    
+}
+
+.blog2-inner h3 {
+    color: #000;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-left: 70px;
+
+}
+.blog2-inner ul{
+    padding-top: 30px;
+}
+.blog2-inner ul li a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 100px;
+    color: #000;
+    font-family: Radio Canada;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+
+
+
+
+.blogs-last {
+    top: 50px;
+    width: 100%;
+    height: 650px;
+    background-color: rgba(255, 165, 0, 0.50);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 70px;
+
+}
+
+.blog-div {
+    width: 45%;
+    height: 550px;
+    margin-left: 20px;
+}
+
+.bloglast-para img {
+
+    padding-top: 60px;
+    padding-right: 90px;
+
+}
+
+.blogs-last p {
+    margin-top: 70px;
+    margin-left: 20px;
+    color: #000;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+
+/* ---------------     Footer Section Start here        -------------------  */
+
+.footer {
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    background: #524D4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+    padding: 40px 0;
+    gap: 10px;
+}
+
+.priotrize-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: -18px;
+}
+
+.priotrize-class img {
+    width: 268px;
+    height: 101px;
+    flex-shrink: 0;
+}
+
+.priotrize-class p {
+    color: #FFA500;
+    font-family: "Radio Canada";
+    font-size: 22px;
+    font-weight: 600;
+    width: 404px;
+    text-align: center;
+}
+
+.footer-info,
+.company-info,
+.contact-info,
+.more-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 18px;
+    margin-left: -40px;
+}
+
+
+.terms {
+    margin-left: -40px;
+}
+
+.company-info h3,
+.contact-info h3,
+.more-info h3 {
+    color: #FFF;
+    font-family: "Radio Canada";
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.more-info h6
+{
+    display: none;
+}
+
+.tag-items .work
+{
+    display: none;
+}
+.tag-items .run
+{
+    display: none;
+}
+.tag-items .fac
+{
+    display: none;
+}
+
+.footer-info p {
+    color: #FFF;
+    font-family: "Radio Canada";
+    font-size: 26px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.services {
+    display: none;
+}
+
+.popular-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.tag-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popular-items h3 {
+    width: 165px;
+    height: 26.329px;
+    flex-shrink: 0;
+    color: #FFA500;
+    font-family: "Radio Canada";
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
+.tag-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#running {
+    display: none;
+}
+
+.abs {
+    width: 70px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #8D8383;
+}
+
+.workout {
+    width: 120px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #8D8383;
+}
+
+.trainers,
+.facilities {
+    width: 105px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFA500;
+}
+
+.facilities {
+    margin-top: -10px;
+}
+
+.boxing {
+    width: 86px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #8D8383;
+}
+
+#trainers {
+    display: none;
+}
+
+.nutrition {
+    width: 120px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFA500;
+}
+
+.tag-items div {
+    color: #FFF;
+    font-family: "Radio Canada";
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    width: 100%;
+    height: 57.438px;
+    flex-shrink: 0;
+    background: #FFA500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.copyright p {
+    color: #000;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 600;
+    width: 455px;
+    height: 40.021px;
+    text-align: center;
+}
+
+.copyright h5
+{
+   display: none;
+}
+
+
+
+
+/* ---------------     Footer Section Start here        -------------------  */

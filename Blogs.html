@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs page</title>
+  <link rel="stylesheet" href="Blogs.css">
+  <link rel="stylesheet" href="media-Blogs.css">
+</head>
+
+<body>
+  <div>
+    <nav>
+      <div class="gymlogo">
+        <img src="images/fitness-logo.png">
+      </div>
+
+      <ul id="list-bar">
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="classes.html">classes</a>
+        </li>
+        <li>
+          <a href="Products.html">products</a>
+        </li>
+        <li>
+          <a href="#">Blogs</a>
+        </li>
+      </ul>
+
+      <button class="button" onclick="openModal()">Join us</button>
+
+      <svg xmlns="http://www.w3.org/2000/svg" height="30" width="20"  
+       viewBox="0 0 512 512">
+       <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License 
+        - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 
+        45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 
+        0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0
+         0 288z"/></svg>
+
+
+      <svg onclick="myMenu()" xmlns="http://www.w3.org/2000/svg" height="16" width="14" 
+      viewBox="0 0 448 512">
+      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - 
+        https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 
+        32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 
+        32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 
+        32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+    </nav>
+
+    <div class="modal" id="myModal">
+      <h2>Subscription Plan</h2>
+      <div class="modal-content">
+        
+        <form onsubmit="return loginUser()">
+    
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="e-mail" name="e-mail" required>
+    
+          <label for="mobileno">Mobile No:</label>
+          <input type="tel" id="mobileno" name="mobileno" required><br><br>
+    
+          <label for="duration">Duration:</label>
+          <div class="check">
+            <input type="checkbox" id="monthly" name="subscription" required>
+            <label for="monthly">Monthly</label>
+          
+            <input type="checkbox" id="yearly" name="subscription" required>
+            <label for="yearly">Yearly</label>
+          </div>
+
+          <label for="modeofpayment">Mode Of Payment:</label>
+          <div class="check">
+            <input type="checkbox" id="cash" name="subscription" required>
+            <label class="lab" for="cash">Cash</label>
+          
+            <input type="checkbox" id="online" name="subscription" required>
+            <label for="online">Online</label>
+          </div>
+
+          <label for="personaltrainer">personal Trainer:</label>
+          <div class="check2">
+            <input type="checkbox" id="required" name="subscription" required>
+            <label for="required">Required</label>
+          </div><br>
+
+          <div class="check2">
+            <input type="checkbox" id="notrequired" name="subscription" required>
+            <label for="notrequired">Not Required</label>
+          </div>
+          <br>
+
+          <div class="check3">
+            <input type="checkbox" id="permission" name="subscription" required>
+            <label for="permisiion">I accept all terms and conditions
+              provided in this form.</label>
+          </div>
+    
+          <button type="submit" class="buyplan-btn">Buy Plan</button>
+        </form>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+    
+    </div>
+
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      function loginUser() {
+        // Example login logic (replace with your actual authentication logic)
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Check if the entered username and password are correct
+        if (username === "exampleUser" && password === "examplePassword") {
+          alert("Login successful!");
+          closeModal(); // Close the modal after successful login
+          return false; // Prevent form submission
+        } else {
+          alert("Invalid username or password. Please try again.");
+          return false; // Prevent form submission
+        }
+      }
+
+      function myMenu() {
+      var show = document.getElementById("list-bar");
+      if (show.style.display == "block") {
+        show.style.display = "none";
+      }
+      else {
+        show.style.display = "block";
+      }
+    }
+
+    </script>
+  </div>
+
+  <div class="blogs">
+    <img src="images/merchandise-2.jpg" alt="" width="550px" ; height="550px">
+    <div class="blog-para">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled
+        it to make a type specimen book. It has survived not only five centrelease of
+        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker and simply a dummy text of the printing and
+        typesetting industry including versions of Lorem Ipsum.</p>
+    </div>
+  </div>
+
+  <div class="blog2">
+    <div class="blog2-inner">
+        <h3>BENEFITS OF A HEALTHY DIET</h3>
+
+        <img src="images/blog-img2.jpg" alt="" width="400px" height=400px">
+
+        <ul>
+            <li><a href="#">May help you live longer.</a></li>
+            <li><a href="#">Keeps skin, teeth, and eyes healthy.</a></li>
+            <li><a href="#">Supports muscles.</a></li>
+            <li><a href="#">Boosts immunity.</a></li>
+            <li><a href="#">Strengthens bones.</a></li>
+            <li><a href="#">Supports healthy pregnancies and breastfeeding.</a></li>
+            <li><a href="#">Helps the digestive system function.</a></li>
+        </ul>
+      </div>
+</div>
+
+    
+  <div class="blogs-last">
+    <div class="blog-div">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text
+      ever since the 1500s, when an unknown printer took a galley of type and scrambled
+      it to make a type specimen book. It has survived not only five centrelease of
+      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker and simply a dummy text of the printing and
+      typesetting industry including versions of Lorem Ipsum.</p>
+    </div>
+    <div class="bloglast-para">
+        <img src="images/merchandise-1.jpg" alt="" width="550px" ; height="550px">
+    </div>
+  </div>
+
+  <!-------------       Footer Section Start here           ---------------->
+
+  <footer class="footer">
+    <div class="footer-items">
+      <div class="priotrize-class">
+        <img src="images/fitness-logo.png" alt="logo">
+        <p>Prioritize Your Fitness Goals <br>
+          with our world class services</p>
+      </div>
+
+      <div class="footer-info">
+        <div class="info">
+          <div class="company-info">
+            <h3>Company</h3>
+            <p> About </p>
+            <p>Carrier</p>
+            <p>Blog</p>
+          </div>
+          <div class="contact-info">
+            <h3>Contact</h3>
+            <p>Help/FAQs</p>
+            <p>Press</p>
+            <p>Mobile</p>
+          </div>
+          <div class="more-info">
+            <h3>More</h3>
+            <p class="pro">Program</p>
+            <p>Plans</p>
+            <p>Method</p>
+  
+            <h6>Memberships</h6>  <!--  For Small Devices  -->
+            <h6>Customer Services</h6>  <!--  For Small Devices   -->
+            
+          </div>
+        </div>
+        <p class="terms">Terms & Conditions</p>
+        <div class="services">
+          <h3>MemberShip</h3>
+          <h3>Customer Service</h3>
+        </div>
+      </div>
+
+      <div class="popular-items">
+        <h3>Popular Tags</h3>
+        <div class="tag-content">
+          <div class="tag-items">
+            <div id="abs" class="abs">ABS</div>
+            <div class="workout">Workout</div>
+          </div>
+
+          <div class="tag-items">
+            <div class="nutrition">Nutrition</div>
+            <div id="abs" class="abs">ABS</div>
+            <div class="work">Workout</div>
+            <div class="run">Running</div>
+
+          </div>
+
+          <div class="tag-items">
+            <div class="boxing">Boxing</div>
+            <div id="trainers1" class="trainers">Trainers</div>
+            <div class="fac">Facilities</div>
+
+          </div>
+
+          <div class="tag-items">
+            <div id="trainers" class="trainers">Trainers</div>
+          </div>
+
+          <div class="tag-items">
+            <div class="facilities">Facilities</div>
+          </div>
+
+          <div class="tag-items">
+            <div id="running">Running</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>CopyRight All Rights Reserved</p>
+      <h5>Copyright @ 2023 Fitness Star Gym pvt ltd </h5>
+    </div>
+  </footer>
+  
+ <!-------------       Footer Section End here           ---------------->
+</body>
+</html>

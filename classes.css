@@ -1,0 +1,573 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;*/
+    padding-top: 0px;
+    padding-left: 2%;
+    padding-right: 5%;
+    background-color: #524D4D;
+    justify-content: right;
+}
+
+.gymlogo img {
+    height: 190px;
+    margin-top: 17px;
+    z-index: 999;
+    opacity: 200;
+}
+
+.gymlogo {
+    flex: 1;
+    /* The left content takes up all available space */
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav a {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0 25px;
+    color: rgb(250, 246, 246);
+    text-decoration: none;
+    position: relative;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+nav a::after {
+    content: ''; /* Use a valid content value */
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.2s linear;
+}
+
+nav a:hover::after {
+    width: 80%;
+}
+
+
+.button {
+    background: orange;
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+svg
+{
+    display: none;
+}
+
+
+.modal 
+ {
+     display: none;
+     position: fixed;
+     top: 70px;
+     left: 450px;
+     width: 50%;
+     height: 100%;
+     z-index: 1;
+     
+ }
+
+ .modal-content {
+     display: flex;
+     flex-direction: column;
+     margin-top: 60px;
+     padding-top: 50px;
+     width: 30%;
+     background: #FFA500;
+     border-radius: 2px;
+     position: fixed;
+     margin-left: 180px;
+ }
+
+ .modal h2 {
+    font-size: 30px;
+     width: 100%;
+     height: 60px;
+     background-color: #4D4848;
+     margin-bottom: 20px;
+     padding: 10px 300px;
+     color: #FFF;
+     /* Add margin below the header */
+ }
+
+
+ .modal-content label {
+     padding-left: 20px;
+     padding-top: 0px;
+ }
+
+ .check {
+     width: 90%;
+     height: 50px;
+     padding-top: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     text-align: left;
+     gap: 0;
+ }
+
+ .check2 {
+     padding-top: 10px;
+     display: flex;
+ }
+
+ .check3 {
+     display: flex;
+ }
+
+ .modal-content .check input {
+     width: 50px;
+     height: 15px;
+     padding: 0;
+     margin: 0;
+ }
+
+ .modal-content .check2 input {
+     width: 50px;
+     height: 15px;
+     padding: 10px 0px;
+     margin: 0;
+ }
+
+ .modal-content .check3 input {
+     width: 50px;
+     height: 10px;
+     padding: 0;
+     margin: 0;
+ }
+
+ .modal-content .lab {
+     text-align: left;
+     padding-right: 20px;
+     padding-top: 0;
+ }
+
+
+ .modal-content input {
+     margin-bottom: 10px;
+     top: 100px;
+     width: 90%;
+     padding: 8px;
+     margin-left: 18px;
+     display: inline-block;
+     border: 1px solid #636161;
+     box-sizing: border-box;
+ }
+
+ .buyplan-btn
+ {
+     fill: #8D8383;
+     stroke-width: 2px;
+     stroke: #000;
+     color: #000;
+     border-radius: 5px;
+     float: right;
+     padding: 8px 15px;
+     font-size: 20px;
+ }
+
+ .close-btn {
+     background: hsl(138, 90%, 49%);
+     color: white;
+     border-radius: 5px;
+     float: right;
+     padding: 7px 18px;
+     width: 100px;
+     margin-left: 5px;
+
+ }
+
+
+/*   <-- ----------       Our Classes Section of Classes        -----------      -->*/
+
+.class-section {
+    top: 50px;
+    width: 100%;
+    height: 721px;
+    flex-shrink: 0;
+    background-image: url(images/classes-bg.jpg);
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.class-section h1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 30px;
+    margin-left: 40%;
+    border-bottom: 3px solid #FFF;
+    /* Adjust the thickness and color as needed */
+    padding-bottom: 6px;
+    /* Adjust the space between text and line as needed */
+    display: inline-block;
+    /* Ensures that the border only covers the width of the text */
+
+}
+
+.container {
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container p {
+    color: #FFF;
+    padding: 15px 60px;
+    font-size: 25px;
+}
+
+.container button {
+    padding: 15px 30px;
+    border-radius: 120px;
+    border: 1px solid #000;
+    background: #C53B3B;
+    margin-left: 25px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 600;
+
+}
+
+.im {
+
+    border-radius: 50px;
+    border: 4px solid #FFF;
+}
+
+/* <-- ----------       Our Classes Section of Classes        -----------      --> */
+
+
+/* <-- ----------     Our Trainig Section Section of Classes    -----------    --> */
+
+.training-partner {
+    top: 772px;
+    width: 100%;
+    height: 560px;
+    flex-shrink: 0;
+    background: #FFF;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.training-partner h1 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 2px;
+    margin-left: 35%;
+    border-bottom: 2px solid #000;
+    /* Adjust the thickness and color as needed */
+    padding-bottom: 10px;
+    /* Adjust the space between text and line as needed */
+    display: inline-block;
+    /* Ensures that the border only covers the width of the text */
+
+}
+
+.bg-color
+{
+    margin-top: -200px;
+    width: 100%;
+    height: 240px;
+    background: rgba(241, 158, 2, 0.34);
+    z-index: 2;
+}
+.training-container {
+    margin: 70px;
+    margin-left: 25vh;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.training-container button {
+    width: 207px;
+    height: 47.228px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    margin-left: 30px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 600;
+    border-radius: 30px;
+    background: #4D4848;
+}
+
+#third-bg
+{
+    margin-top: 1380px;
+    height: 500px;
+    width: 100%;
+    flex-shrink: 0;
+    z-index: 999;
+    opacity: 500;
+}
+#third-bg img
+{
+    width: 100%;
+    height: 500px; 
+}
+
+/* <-- ----------     Our Trainig Section Section of Classes    -----------    --> */
+
+.footer {
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    background: #524D4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+    padding: 40px 0;
+    gap: 10px;
+}
+
+.priotrize-class {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: -18px;
+}
+
+.priotrize-class img {
+    width: 268px;
+    height: 101px;
+    flex-shrink: 0; 
+}
+
+.priotrize-class p {
+    color: #FFA500;
+    font-family: "Radio Canada";
+    font-size: 22px;
+    font-weight: 600;
+    width: 404px;
+    text-align: center;
+}
+
+.footer-info ,.company-info , .contact-info , .more-info  {
+    display :flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.more-info h6
+{
+   display: none;
+}
+
+.info 
+{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 18px;
+    margin-left: -40px;
+}
+
+
+.terms {
+    margin-left: -40px;
+}
+
+.company-info  h3, .contact-info h3, .more-info  h3 {
+    color: #FFF;
+    font-family: "Radio Canada";
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.tag-content .work
+{
+    display: none;
+}
+.tag-content .run
+{
+    display: none;
+}
+.tag-content .fac
+{
+    display: none;
+}
+
+
+.footer-info p {
+    color: #FFF;
+    font-family: "Radio Canada";
+    font-size: 26px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.services {
+    display: none;
+}
+
+.popular-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.tag-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popular-items h3 {
+    width: 165px;
+    height: 26.329px;
+    flex-shrink: 0;
+    color: #FFA500;
+    font-family: "Radio Canada";
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
+.tag-items {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+  #running {
+    display: none;
+}
+
+.abs {
+    width: 70px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #8D8383;
+}
+
+.workout {
+    width: 120px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #8D8383;
+}
+
+.trainers ,.facilities{
+    width: 105px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFA500;
+}
+
+.facilities {
+    margin-top: -10px;
+}
+
+.boxing {
+    width: 86px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #8D8383;
+}
+
+#trainers {
+    display: none;
+}
+
+.nutrition {
+    width: 120px;
+    height: 37.801px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFA500;
+}
+
+.tag-items div {
+    color: #FFF;
+    font-family: "Radio Canada";
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    width: 100%;
+    height: 57.438px;
+    flex-shrink: 0;
+    background: #FFA500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.copyright p {
+    color: #000;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 600;
+    width: 455px;
+    height: 40.021px;
+    text-align: center;
+}
+    .copyright h5{
+        display: none;
+    }
+

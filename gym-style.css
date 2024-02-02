@@ -1,0 +1,848 @@
+
+ * {
+     padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;
+ }
+
+ nav {
+
+     height: 50px;
+     display: flex;
+     align-items: center;
+     /* justify-content: space-between;*/
+     padding-top: 0px;
+     padding-left: 2%;
+     padding-right: 5%;
+     background-color: #524D4D;
+     justify-content: right;
+     margin: 0px;
+ }
+
+ .hamburger {
+     display: none;
+ }
+
+ .gymlogo img {
+     height: 190px;
+     margin-top: 17px;
+     z-index: 999;
+     opacity: 200;
+ }
+
+ .gymlogo {
+     flex: 1;
+
+     /* The left content takes up all available space */
+ }
+
+ nav ul {
+     padding: 0;
+ }
+
+ nav li {
+     display: inline-block;
+     list-style: none;
+ }
+
+ nav a {
+     font-size: 18px;
+     text-transform: uppercase;
+     padding: 0 25px;
+     color: rgb(250, 246, 246);
+     text-decoration: none;
+     position: relative;
+ }
+
+ nav a:hover {
+     color: orange;
+ }
+
+ nav a::after {
+     content: '';
+     /* Use a valid content value */
+     width: 0;
+     height: 2px;
+     background-color: orange;
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     transition: width 0.2s linear;
+ }
+
+ nav a:hover::after {
+     width: 80%;
+ }
+
+
+ .button {
+     background: orange;
+     color: rgb(0, 0, 0);
+     padding: 5px 5px;
+     border-radius: 10px;
+     font-family: 'Poppins', sans-serif;
+     font-size: 18px;
+     font-weight: 400px;
+ }
+
+ svg {
+     display: none;
+ }
+
+ .modal 
+ {
+     display: none;
+     position: fixed;
+     top: 70px;
+     left: 450px;
+     width: 50%;
+     height: 100%;
+     z-index: 1;
+     
+ }
+
+ .modal-content {
+     display: flex;
+     flex-direction: column;
+     margin-top: 60px;
+     padding-top: 50px;
+     width: 30%;
+     background: #FFA500;
+     border-radius: 2px;
+     position: fixed;
+     margin-left: 180px;
+ }
+
+ .modal h2 {
+    font-size: 30px;
+     width: 100%;
+     height: 60px;
+     background-color: #4D4848;
+     margin-bottom: 20px;
+     padding: 10px 300px;
+     color: #FFF;
+     /* Add margin below the header */
+ }
+
+ .modal-content label {
+     padding-left: 20px;
+     padding-top: 0px;
+ }
+
+ .check {
+     width: 90%;
+     height: 50px;
+     padding-top: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     text-align: left;
+     gap: 0;
+ }
+
+ .check2 {
+     padding-top: 10px;
+     display: flex;
+ }
+
+ .check3 {
+     display: flex;
+ }
+
+ .modal-content .check input {
+     width: 50px;
+     height: 15px;
+     padding: 0;
+     margin: 0;
+ }
+
+ .modal-content .check2 input {
+     width: 50px;
+     height: 15px;
+     padding: 10px 0px;
+     margin: 0;
+ }
+
+ .modal-content .check3 input {
+     width: 50px;
+     height: 10px;
+     padding: 0;
+     margin: 0;
+ }
+
+ .modal-content .lab {
+     text-align: left;
+     padding-right: 20px;
+     padding-top: 0;
+ }
+
+
+ .modal-content input {
+     margin-bottom: 10px;
+     top: 100px;
+     width: 90%;
+     padding: 8px;
+     margin-left: 18px;
+     display: inline-block;
+     border: 1px solid #636161;
+     box-sizing: border-box;
+ }
+
+ .buyplan-btn
+ {
+     fill: #8D8383;
+     stroke-width: 2px;
+     stroke: #000;
+     color: #000;
+     border-radius: 5px;
+     float: right;
+     padding: 8px 15px;
+     font-size: 20px;
+ }
+
+ .close-btn {
+     background: hsl(138, 90%, 49%);
+     color: white;
+     border-radius: 5px;
+     float: right;
+     padding: 7px 18px;
+     width: 100px;
+     margin-left: 5px;
+
+ }
+
+
+ .main {
+
+    width: 100%;
+    top: 60px;
+    background-color: #FFA500;
+    height: 800px;
+    /* width: 100%;*/
+     top: 50px;
+     background-image: url('images/bg-1.jpg');
+     position: absolute;
+     background-position: center center;
+     background-size: 99%;
+     flex-shrink: 0;
+ }
+
+ .box {
+     margin-top: 10%;
+     margin-left: 7%;
+     width: 664px;
+     height: 524px;
+     flex-shrink: 0;
+     border-radius: 4px;
+     background: rgba(30, 29, 29, 0.86);
+     display: flex;
+     flex-direction: column;
+     /* justify-content: center;*/
+     align-items: center;
+     gap: 30px;
+ }
+
+ .box h1 {
+     font-family: Radio Canada;
+     font-size: 90px;
+     font-weight: 700px;
+     color: #fff;
+     line-height: normal;
+     margin-top: 40px;
+
+ }
+
+ .box p {
+     color: #D7D0D0;
+     font-family: Radio Canada;
+     font-size: 22px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+
+ }
+
+ .btn {
+     display: flex;
+     gap: 10px;
+     /* margin-left: 20px;*/
+ }
+
+ .button2 {
+
+     width: 207px;
+     height: 56px;
+     border-radius: 4px;
+     background: #FFA500;
+     color: white;
+     font-family: Radio Canada;
+     font-size: 27px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+ }
+
+ .button3 {
+
+     width: 177px;
+     height: 56px;
+     color: white;
+     font-family: Radio Canada;
+     font-size: 27px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     border-radius: 4px;
+     border: 3px solid #FFA500;
+     background: #4D4848;
+ }
+
+ .main2 {
+     width: 100%;
+     top: 801px;
+     background: rgba(255, 165, 0, 0.32);
+     position: relative;
+     height: 690px;
+     display: flex;
+     flex-direction: column;
+     padding: 0px;
+     gap: 16px;
+ }
+
+ .main2 h2 {
+     color: #000;
+     font-family: Ubuntu;
+     font-size: 49px;
+     font-weight: 500;
+     text-decoration-line: underline;
+     padding-left: 35vw;
+     margin-top: 2%;
+ }
+
+ .fitness-box {
+     padding: 0px 180px;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     gap: 50px;
+     justify-items: center;
+     align-items: center;
+     margin-left: 20px;
+     margin: 100px;
+ }
+
+ .box3 {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 16px;
+     /*width: 150px;*/
+     float: center;
+     align-items: center;
+     justify-content: space-between;
+     padding-left: 23%;
+ }
+
+ .box3 p {
+     color: #000;
+     font-family: "Radio Canada";
+     font-size: 34px;
+     font-weight: 500;
+     text-align: center;
+ }
+
+ .lines {
+     margin-top: -340px;
+ }
+
+ .vl {
+     border-left: 3px solid #FFA500;
+     height: 470px;
+     position: absolute;
+     left: 38%;
+     margin-left: 20px;
+     margin-top: 0px;
+     top: 150px;
+ }
+
+ .vll {
+     border-left: 3px solid #FFA500;
+     height: 470px;
+     position: absolute;
+     left: 63%;
+     margin-left: 6px;
+     margin-top: -0px;
+     top: 150px;
+ }
+
+ .hl {
+     border-left: 3px solid #FFA500;
+     height: 1000px;
+     position: relative;
+     left: 400px;
+     margin-left: 220px;
+     top: -250px;
+     width: 450px;
+     transform: rotate(90deg);
+ }
+
+ .subscribe
+ {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .subscribe .sub2{
+     display: flex;
+     flex-direction: column;
+     top: 1490px;
+     width: 100%;
+     height: 709px;
+     padding-left: 0vh;
+     margin-left: 0;
+     background-image: url(images/subscription.jpg);
+     position: absolute;
+     background-position: center center;
+     background-size: 100%;
+ }
+
+ .sub
+ {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 12vw;
+    gap: 30px;
+ }
+
+ .sub2 h1 {
+     
+     padding: 10px 39vw;
+     color: yellow;
+     font-family: Ubuntu;
+     font-size: 49px;
+     font-weight: 500;
+     text-decoration-line: underline;
+
+ }
+
+ .sub  div {
+     margin-top: 12%;
+     width: 264px;
+     height: 374px;
+     border-radius: 4px;
+     background: rgba(30, 29, 29, 0.86);
+     margin-inline: 57px;
+ }
+
+ .one {
+     color: #FFA500;
+     font-family: Radio Canada;
+     font-size: 40px;
+     font-weight: 500;
+     padding-left: 70px;
+ }
+
+ .two {
+     color: #FFA500;
+     font-family: Radio Canada;
+     font-size: 40px;
+     font-weight: 500;
+     padding-left: 10px;
+ }
+
+ .three {
+     color: #FFA500;
+     font-family: Radio Canada;
+     font-size: 40px;
+     font-weight: 500;
+     padding-left: 40px;
+ }
+
+ .subscribe h3 {
+     padding-top: 10px;
+     padding-left: 40px;
+     font-family: Radio Canada;
+     font-size: 30px;
+     font-weight: 500;
+     color: #B5AAAA;
+ }
+
+ .subscribe h4 {
+     padding-top: 50px;
+     padding-left: 40px;
+     font-family: Radio Canada;
+     font-size: 30px;
+     font-weight: 500;
+     color: #FFA500;
+ }
+
+ .subscribe h5 {
+     padding-top: 1px;
+     padding-left: 40px;
+     color: #A49B9B;
+     font-family: Radio Canada;
+     font-size: 30px;
+     font-weight: 500;
+ }
+
+ .plan-btn {
+     width: 207px;
+     height: 56px;
+     margin-left: 25px;
+     margin-top: 40px;
+     border-radius: 4px;
+     border: 4px solid #FFA500;
+     background: #524D4D;
+     color: white;
+     font-family: Radio Canada;
+     font-size: 27px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+ }
+
+
+
+
+ /*  --------------    Fitness Club  Section Start Here     ----------------  */
+
+ .club {
+     top: 2200px;
+     width: 100%;
+     height: 348px;
+     flex-shrink: 0;
+     background-image: url("images/bg4.jpg");
+     position: absolute;
+     background-size: 100%;
+     background-repeat: no-repeat;
+ }
+
+ .club-bg {
+     margin-top: 1548px;
+     width: 100%;
+     height: 400px;
+     flex-shrink: 0;
+     background: rgba(255, 165, 0, 0.73);
+ }
+
+ .middle {
+     margin-top: 190px;
+     width: 72%;
+     height: 250px;
+     margin-left: 30vh;
+     border-radius: 4px;
+     background: #fff;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     gap: 50px;
+     padding-top: 20px;
+ }
+
+ .fitness-div {
+     display: grid;
+     flex-direction: row;
+     align-items: center;
+     gap: 10px;
+     justify-items: center;
+     float: center;
+     justify-content: space-between;
+ }
+
+ .fitness-div h1 {
+     color: #000;
+     font-family: "Radio Canada";
+     font-size: 34px;
+     font-weight: 500;
+     text-align: center;
+
+ }
+
+ .fitness-div p {
+     color: #000;
+     font-family: "Radio Canada";
+     font-size: 18px;
+     font-weight: 500;
+     text-align: center;
+ }
+
+ /*  --------------    Fitness Club  Section End Here     ----------------  */
+
+
+
+ /*  --------------   Success Story  Section Start Here     ---------------- */ 
+
+ .story {
+     top: 2549px;
+     height: 650px;
+     background-color: #000;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .story h1 {
+     color: #FFA500;
+     align-items: center;
+     font-size: 48px;
+     font-weight: 400;
+     padding-left: 80vh;
+     padding-top: 30px;
+ }
+
+ .story-container {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-left: 10%;
+     margin-top: 2%;
+     width: 80%;
+     height: 450px;
+     background-color: none;
+     padding: 30px 40px;
+ }
+
+ .story-container p {
+
+     font-family: "Radio Canada";
+     font-size: 18px;
+     font-weight: 500;
+     text-align: center;
+     color: yellow;
+ }
+
+
+ /*  --------------   Success Story Section Ends Here    ----------------  */
+
+
+
+ /*  --------------   Footer Section Start Here     ----------------  */
+
+ .footer {
+     width: 100%;
+     height: 400px;
+     flex-shrink: 0;
+     background: #524D4D;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+ .footer-items {
+     display: flex;
+     justify-content: space-between;
+     margin-right: 60px;
+     padding: 40px 0;
+     gap: 10px;
+ }
+
+ .priotrize-class {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     margin-top: -18px;
+ }
+
+ .priotrize-class img {
+     width: 268px;
+     height: 101px;
+     flex-shrink: 0;
+ }
+
+ .priotrize-class p {
+     color: #FFA500;
+     font-family: "Radio Canada";
+     font-size: 22px;
+     font-weight: 600;
+     width: 404px;
+     text-align: center;
+ }
+
+ .footer-info,
+ .company-info,
+ .contact-info,
+ .more-info {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 30px;
+ }
+
+ .info {
+     display: flex;
+     justify-content: space-evenly;
+     gap: 18px;
+     margin-left: -40px;
+ }
+
+
+ .terms {
+     margin-left: -40px;
+ }
+
+ .company-info h3,
+ .contact-info h3,
+ .more-info h3 {
+     color: #FFF;
+     font-family: "Radio Canada";
+     font-size: 34px;
+     font-weight: 500;
+ }
+
+ .more-info h6
+ {
+    display: none;
+ }
+
+ .tag-items .work {
+     display: none;
+ }
+
+ .tag-items .run {
+     display: none;
+ }
+
+ .tag-items .fac {
+     display: none;
+ }
+
+ .footer-info p {
+     color: #FFF;
+     font-family: "Radio Canada";
+     font-size: 26px;
+     font-weight: 400;
+     cursor: pointer;
+ }
+
+ .services {
+     display: none;
+ }
+
+ .popular-items {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+ }
+
+ .tag-content {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .popular-items h3 {
+     width: 165px;
+     height: 26.329px;
+     flex-shrink: 0;
+     color: #FFA500;
+     font-family: "Radio Canada";
+     font-size: 22px;
+     font-weight: 500;
+     text-decoration-line: underline;
+ }
+
+ .tag-items {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+ }
+
+ #running {
+     display: none;
+ }
+
+ .abs {
+     width: 70px;
+     height: 37.801px;
+     flex-shrink: 0;
+     border-radius: 4px;
+     background: #8D8383;
+ }
+
+ .workout {
+     width: 120px;
+     height: 37.801px;
+     flex-shrink: 0;
+     border-radius: 4px;
+     background: #8D8383;
+ }
+
+ .trainers,
+ .facilities {
+     width: 105px;
+     height: 37.801px;
+     flex-shrink: 0;
+     border-radius: 4px;
+     background: #FFA500;
+ }
+
+ .facilities {
+     margin-top: -10px;
+ }
+
+ .boxing {
+     width: 86px;
+     height: 37.801px;
+     flex-shrink: 0;
+     border-radius: 4px;
+     background: #8D8383;
+ }
+
+ #trainers {
+     display: none;
+ }
+
+ .nutrition {
+     width: 120px;
+     height: 37.801px;
+     flex-shrink: 0;
+     border-radius: 4px;
+     background: #FFA500;
+ }
+
+ .tag-items div {
+     color: #FFF;
+     font-family: "Radio Canada";
+     font-size: 22px;
+     font-weight: 400;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     letter-spacing: 1px;
+ }
+
+ .copyright {
+     width: 100%;
+     height: 57.438px;
+     flex-shrink: 0;
+     background: #FFA500;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+
+ .copyright p {
+     color: #000;
+     font-family: "Poppins";
+     font-size: 24px;
+     font-weight: 600;
+     width: 455px;
+     height: 40.021px;
+     text-align: center;
+ }
+
+ .copyright h5 {
+     display: none;
+ }
+
+ /*  --------------   Footer Section Ends Here     ----------------  */

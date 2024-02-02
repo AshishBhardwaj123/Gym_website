@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0,user-scalable=no">
+  <title>Gym Management</title>
+
+  <link rel="stylesheet" href="gym-style.css">
+
+  <link rel="stylesheet" href="media-gymstyle.css">
+</head>
+
+<body>
+  <div>
+    <nav>
+      <div class="gymlogo">
+        <img src="images/fitness-logo.png">
+
+      </div>
+
+      <ul id="list-bar">
+        <li>
+          <a href="#">Home</a>
+        </li>
+
+        <li>
+          <a href="classes.html">Classes</a>
+        </li>
+
+        <li>
+          <a href="Products.html">Products</a>
+        </li>
+
+        <li>
+          <a href="Blogs.html">Blogs</a>
+        </li>
+      </ul>
+
+      <button class="button" onclick="openModal()">Join us</button>
+
+      <svg xmlns="http://www.w3.org/2000/svg" height="30" width="20" viewBox="0 0 512 512">
+        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License 
+        - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 
+        45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 
+        0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0
+         0 288z" />
+      </svg>
+
+      <svg onclick="myMenu()" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - 
+        https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 
+        32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 
+        32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 
+        32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+      </svg>
+    </nav>
+
+    <div class="modal" id="myModal">
+      <h2>Subscription Plan</h2>
+      <div class="modal-content">
+
+        <form onsubmit="return loginUser()">
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="e-mail" name="e-mail" required>
+
+          <label for="mobileno">Mobile No:</label>
+          <input type="tel" id="mobileno" name="mobileno" required><br><br>
+
+          <label for="duration">Duration:</label>
+          <div class="check">
+            <input type="checkbox" id="monthly" name="subscription" required>
+            <label for="monthly">Monthly</label>
+
+            <input type="checkbox" id="yearly" name="subscription" required>
+            <label for="yearly">Yearly</label>
+          </div>
+
+          <label for="modeofpayment">Mode Of Payment:</label>
+          <div class="check">
+            <input type="checkbox" id="cash" name="subscription" required>
+            <label class="lab" for="cash">Cash</label>
+
+            <input type="checkbox" id="online" name="subscription" required>
+            <label for="online">Online</label>
+          </div>
+
+          <label for="personaltrainer">personal Trainer:</label>
+          <div class="check2">
+            <input type="checkbox" id="required" name="subscription" required>
+            <label for="required">Required</label>
+          </div><br>
+
+          <div class="check2">
+            <input type="checkbox" id="notrequired" name="subscription" required>
+            <label for="notrequired">Not Required</label>
+          </div>
+          <br>
+
+          <div class="check3">
+            <input type="checkbox" id="permission" name="subscription" required>
+            <label for="permisiion">I accept all terms and conditions
+              provided in this form.</label>
+          </div>
+
+          <button type="submit" class="buyplan-btn">Buy Plan</button>
+        </form>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+
+    var joinUsButton = document.querySelector('.button');
+    joinUsButton.addEventListener('click', function () {
+      openModal();
+    });
+
+    function openModal() {
+      document.getElementById("myModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    function loginUser() {
+      // Example login logic (replace with your actual authentication logic)
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Check if the entered username and password are correct
+      if (username === "exampleUser" && password === "examplePassword") {
+        alert("Login successful!");
+        closeModal(); // Close the modal after successful login
+        return false; // Prevent form submission
+      } else {
+        alert("Invalid username or password. Please try again.");
+        return false; // Prevent form submission
+      }
+    }
+
+    function myMenu() {
+      var show = document.getElementById("list-bar");
+      if (show.style.display == "block") {
+        show.style.display = "none";
+      }
+      else {
+        show.style.display = "block";
+      }
+    }
+
+  </script>
+  </div>
+
+  <!-------------------    First Section Starts Here      --------------------->
+
+  <div class="main">
+    <div class="box">
+      <h1>Revitalize <br> your body</br></h1>
+
+      <p>Fall in love with taking care of yourself:<br>mind body and spirit</br></p>
+      <div class="btn">
+        <button class="button2">Get Started</button>
+        <button class="button3">Free Trial </button>
+      </div>
+    </div>
+  </div>
+
+  <!-------------------    First Section Ends Here      --------------------->
+
+
+  <!------------------- Fitness plan And Nutrition  Starts Here --------------------->
+
+  <div class="main2">
+    <h2>Fitness Plans and Nutrition</h2>
+
+    <div class="fitness-box">
+      <div class="box3">
+
+        <img src="images/icon1.png" alt="weigth-pound" width="110px" ; height="119px">
+
+        <p>Weight Loss</p>
+      </div>
+      <div class="box3">
+
+        <img src="images/icon2.png" alt="yoga" width="124px" ; height="110px">
+
+        <p>Class Yoga</p>
+      </div>
+      <div class="box3">
+
+        <img src="images/icon3.png" alt="cycling" width="110px" ; height="110px">
+
+        <p>Cycling</p>
+      </div>
+      <div class="box3">
+
+        <img src="images/icon4.png" alt="biceps" width="110px" ; height="110px">
+
+        <p>Body Building</p>
+      </div>
+      <div class="box3">
+
+        <img src="images/icon5.png" alt="gym" width="110px" ; height="110px">
+
+        <p>Hypertrophy</p>
+      </div>
+      <div class="box3">
+
+        <img src="images/icon6.png" alt="running" width="110px" ; height="110px">
+
+        <p>Running</p>
+      </div>
+    </div>
+    <div class="lines">
+      <div class="line-1">
+        <div class="vl"></div>
+      </div>
+
+      <div class="line-2">
+        <div class="vll"></div>
+      </div>
+
+      <div class="line-2">
+        <div class="hl"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!------------------- Fitness plan And Nutrition Ends Here --------------------->
+
+
+  <!------------------- Subscription Plan Section  Starts Here --------------------->
+
+  <div class="subscribe">
+    <div class="sub2">
+      <h1>Subscription plan</h1>
+      <div class="sub">
+    <div>
+      <h2 class="one">Basic</h2>
+      <h3>for 12 month</h3>
+      <h4>800/month</h4>
+      <h5>for streaming</h5>
+      <button class="plan-btn">Select Plan</button>
+    </div>
+    <div>
+      <h2 class="two">Intermediate</h2>
+      <h3>for 12 month</h3>
+      <h4>1200/month</h4>
+      <h5>for streaming</h5>
+      <button class="plan-btn">Select Plan</button>
+    </div>
+    <div>
+      <h2 class="three">Advanced</h2>
+      <h3>for 12 month</h3>
+      <h4>1500/month</h4>
+      <h5>for streaming</h5>
+      <button class="plan-btn">Select Plan</button>
+    </div>
+  </div>
+</div>
+</div>
+  <!------------------- Subscription Plan Section  Ends Here --------------------->
+
+
+  <!------------------- Subscription Plan Section  Starts Here --------------------->
+
+
+  <div class="club">
+    <div class="middle">
+      <div class="fitness-div">
+        <img src="images/setting.png" alt="" width="70px" ; height="80px">
+        <h1>Good Management</h1>
+        <p>What hurts today make you strong <br>tommorrow</p>
+      </div>
+
+      <div class="fitness-div">
+        <img src="images/icon-9.jpg" alt="" width="70px" ; height="80px">
+        <h1>practise Session</h1>
+        <p>motivation is what gets you started </p>
+      </div>
+      <div class="fitness-div">
+        <img src="images/icon-10.png" alt="" width="70px" ; height="80px">
+        <h1>Good Managrment</h1>
+        <p>If it doesn't challenge you, it won't <br>change you</p>
+      </div>
+    </div>
+  </div>
+  <div class="club-bg"></div>
+
+
+  <!------------------- Subscription Plan Section  Starts Here --------------------->
+
+
+  <!------------------- Subscription Plan Section  Starts Here --------------------->
+
+
+  <div class="story">
+    <h1>Success Stories</h1>
+    <div class="story-container">
+      <div class="hide">
+        <img src="images/story1.jpg" alt="" width="280px" ; height="350px">
+        <p>Working out regularly I lose <br>of my extra pounds which
+          <br>helped in my modelling career
+        </p>
+      </div>
+
+      <div>
+        <img src="images/story2.jpg" alt="" width="280px" ; height="350px">
+        <p>Yoga and Pilates helped <br>me get back in shape<br>
+          and raised my confidence.</p>
+      </div>
+
+      <div>
+        <img src="images/story3.jpg" alt="" width="280px" ; height="350px">
+        <p>Personal Trainer diet plan <br>helpedin increasing
+          <br>strength and endurance.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!------------------- Subscription Plan Section  Starts Here --------------------->
+
+
+  <!------------------- Subscription Plan Section  Starts Here --------------------->
+
+
+  <footer class="footer">
+    <div class="footer-items">
+      <div class="priotrize-class">
+        <img src="images/fitness-logo.png" alt="logo">
+        <p>Prioritize Your Fitness Goals <br>
+          with our world class services</p>
+      </div>
+
+      <div class="footer-info">
+        <div class="info">
+          <div class="company-info">
+            <h3>Company</h3>
+            <p> About </p>
+            <p>Carrier</p>
+            <p>Blog</p>
+          </div>
+          <div class="contact-info">
+            <h3>Contact</h3>
+            <p>Help/FAQs</p>
+            <p>Press</p>
+            <p>Mobile</p>
+          </div>
+          <div class="more-info">
+            <h3>More</h3>
+            <p class="pro">Program</p>
+            <p>Plans</p>
+            <p>Method</p>
+
+            <h6>Memberships</h6> <!--  For Small Devices  -->
+            <h6>Customer Services</h6> <!--  For Small Devices   -->
+
+          </div>
+        </div>
+        <p class="terms">Terms & Conditions</p>
+        <div class="services">
+          <h3>MemberShip</h3>
+          <h3>Customer Service</h3>
+        </div>
+      </div>
+
+      <div class="popular-items">
+        <h3>Popular Tags</h3>
+        <div class="tag-content">
+          <div class="tag-items">
+            <div id="abs" class="abs">ABS</div>
+            <div class="workout">Workout</div>
+          </div>
+
+          <div class="tag-items">
+            <div class="nutrition">Nutrition</div>
+            <div id="abs" class="abs">ABS</div>
+            <div class="work">Workout</div>
+            <div class="run">Running</div>
+
+          </div>
+
+          <div class="tag-items">
+            <div class="boxing">Boxing</div>
+            <div id="trainers1" class="trainers">Trainers</div>
+            <div class="fac">Facilities</div>
+
+          </div>
+
+          <div class="tag-items">
+            <div id="trainers" class="trainers">Trainers</div>
+          </div>
+
+          <div class="tag-items">
+            <div class="facilities">Facilities</div>
+          </div>
+
+          <div class="tag-items">
+            <div id="running">Running</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>CopyRight All Rights Reserved</p>
+      <h5>Copyright @ 2023 Fitness Star Gym pvt ltd </h5>
+    </div>
+  </footer>
+</body>
+
+</html>

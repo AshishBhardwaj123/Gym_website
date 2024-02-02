@@ -1,0 +1,368 @@
+@media screen and (min-width: 320px) and (max-width: 425px)
+ {
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        padding-right: 20px;
+        /* Adjust padding as needed */
+        height: 45px;
+    }
+
+    .gymlogo img {
+        width: 120px;
+        height: 90px;
+        /* Adjust height as needed */
+        margin-top: 0px;
+        /* Adjust margin as needed */
+        margin: 0px;
+
+    }
+
+    svg {
+        display: block;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    nav ul {
+
+        /* Hide the navigation links by default */
+        display: none;
+        width: 100%;
+        /* Take up full width */
+        text-align: center;
+        background-color: #e9e0e0;
+        position: absolute;
+        top: 40px;
+        height: 200px;
+        left: 0;
+        z-index: 998;
+        /* Ensure it's above the logo */
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50px;
+    }
+
+    nav ul li a {
+        display: flex;
+        flex-direction: row;
+        color: #000;
+        padding: 8px 0px;
+    }
+
+    /* Show the navigation links when the hamburger is clicked */
+    nav.show-nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .modal
+    {
+       display: none;
+    }
+
+    .blogs
+    {
+        display: block;
+        height: 400px;
+        margin-top: 0;
+    }
+
+    .blogs img{
+        width: 90%;
+        height: 200px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 10px;
+    }
+
+    .blog-para
+    {
+        margin-top: 0px;
+        width: 100%;
+        height: 180px;
+        
+    }
+
+    .blog-para p 
+    {
+        width: 100%;
+        padding: 0px 20px;
+        font-size: 15px;
+        margin-left: 0;
+        text-align: justify;
+    }
+
+    .blog2
+    {
+       height: 500px;
+    }
+    .blog2-inner 
+    {
+        margin-top: 30px;
+        height: 450px;
+        margin-left: 40px;
+    }
+
+    .blog2-inner h3
+    {
+        font-size: 20px;
+        margin-left: 15px;
+    }
+    .blog2-inner img 
+    {
+        float: left;
+        width: 300px;
+        height: 150px;
+        padding-left: 30px;
+        padding-top: 5px;
+    }
+
+    .blog2-inner ul{
+        padding-top: 160px;
+    }
+
+    .blog2-inner ul li a
+     {
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+
+    
+    .blogs-last
+    {
+        margin-top: -70px;
+        display: block;
+        padding-left: 0;
+        height: 450px;
+    }
+    
+    .bloglast-para
+    {
+       
+    }
+
+    .bloglast-para img
+    {
+        padding-top: 0;
+        width: 93%;
+        height: 220px;
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    .blogs-last p
+    {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .blog-div
+     {
+        width: 100%;
+        height: 220px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .blogs-last p
+    {
+        margin-left: 0px;
+        padding: 5px 20px;
+    }
+
+
+
+
+    
+    
+
+    .footer {
+        height: 422px;
+
+    }
+
+    .footer-items {
+        display: block;
+        padding: 0px 0px;
+        margin-right: 40px;
+    }
+
+    .priotrize-class {
+        width: 100%;
+        height: 120px;
+        margin-top: 0;
+        gap: 0;
+    }
+
+    .priotrize-class img {
+        width: 125px;
+        height: 70px;
+        flex-shrink: 0;
+
+    }
+
+    .priotrize-class p {
+        font-size: 16px;
+        padding-top: 0;
+    }
+
+    .company-info {
+        gap: 10px;
+    }
+
+    .company-info h3 {
+        display: none;
+    }
+
+    .company-info p {
+        font-size: 18px;
+    }
+
+    .more-info p {
+        display: none;
+    }
+
+    .popular-items {
+        gap: 5px;
+    }
+
+    .popular-items h3 {
+        padding-left: 50px;
+        font-size: 20px;
+        width: 190px;
+    }
+
+    .info {
+        margin-left: 40px;
+    }
+
+    .footer-info {
+        padding-top: 10px;
+    }
+
+    .footer-info h6 {
+        color: #FFF;
+        font-family: "Radio Canada";
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .contact-info {
+        display: none;
+    }
+
+    .more-info {
+        gap: 10px;
+    }
+
+    .more-info h3 {
+        display: none;
+    }
+
+    .more-info h6 {
+        display: block;
+    }
+
+
+    .pro {
+        display: none;
+    }
+
+
+    .terms {
+        display: none;
+    }
+
+    .tag-content {
+        width: 425px;
+        flex-direction: column;
+    }
+
+    .tag-items {
+        padding-left: 20px;
+    }
+
+    .tag-items div {
+        font-size: 20px;
+        width: 100px;
+        height: 40px;
+    }
+
+    .tag-items .workout {
+        display: none;
+    }
+
+    .tag-items .abs {
+        display: none;
+    }
+
+    .tag-items .facilities {
+        display: none;
+    }
+
+    .tag-items .work {
+        display: block;
+        width: 100px;
+        height: 40px;
+        padding-top: 8px;
+        padding-left: 10px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #FFA500;
+    }
+
+    .tag-items .run {
+        display: block;
+        width: 100px;
+        height: 40px;
+        padding-top: 8px;
+        padding-left: 10px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #FFA500;
+    }
+
+    .tag-items .fac {
+        display: block;
+        width: 100px;
+        height: 40px;
+        padding-top: 8px;
+        padding-left: 10px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #FFA500;
+    }
+
+    .copyright {
+        display: block;
+        height: 40px;
+    }
+
+    .copyright p {
+        display: none;
+    }
+
+    .copyright h5 {
+        display: block;
+        color: #000;
+        font-family: "Radio Canada";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-left: 80px;
+        padding-top: 10px;
+    }
+}

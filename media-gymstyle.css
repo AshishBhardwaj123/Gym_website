@@ -1,0 +1,513 @@
+@media screen and (min-width: 320px) and (max-width: 425px)
+ {
+
+    nav {
+
+        flex-direction: row;
+        align-items: center;
+        padding-right: 20px;
+        /* Adjust padding as needed */
+        height: 45px;
+    }
+
+    .gymlogo img {
+        width: 120px;
+        height: 90px;
+        /* Adjust height as needed */
+        margin-top: 0px;
+        /* Adjust margin as needed */
+        margin: 0px;
+
+    }
+
+    svg {
+        display: block;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: #e9e0e0;
+        position: absolute;
+        top: 40px;
+        height: 200px;
+        left: 0;
+        z-index: 998;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50px;
+    }
+
+
+    nav ul li a {
+    
+        color: #000;
+        padding: 8px 0px;
+    }
+
+    /* Show the navigation links when the hamburger is clicked */
+    nav.show-nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .modal
+    {
+        display: none;
+    }
+
+
+
+/*     -----------  First Section Start Here  --------------    */
+
+.main {
+    top: 40px;
+    height: 280px;
+    background-position: relative;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.box {
+    margin-top: 10px;
+    width: 90vw;
+    height: 28vh;
+    align-items: left;
+    background: none;
+}
+
+.box h1 {
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.box p {
+    font-size: 18px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+.box br {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    width: 180px;
+    height: 100px;
+
+}
+
+.button2 {
+    width: 180px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.button3 {
+    width: 180px;
+    height: 40px;
+}
+
+
+
+/*     -----------  First Section Ends Here  --------------    */
+
+
+
+/*    ----------- Fitness plan And Nutrition Section Start Here  --------------  */
+
+.main2 {
+    width: 425px;
+    height: 460px;
+    top: 275px;
+    height: 480px;
+}
+
+.main2 h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 100px;
+    margin: 0px;
+    margin-top: 0;
+}
+
+.fitness-box {
+    grid-template-columns: repeat(2, 2fr);
+    /* two column image for smaller screens */
+    gap: 25px;
+    /* gap between image */
+    margin: 20px;
+    /* Remove margin for smaller screens */
+    padding: 0px 30px;
+}
+
+.box3 {
+    padding-left: 0;
+    /* Adjust the padding as needed */
+}
+
+.box3 img {
+    width: 80px;
+    height: 80px;
+}
+
+.box3 p {
+    font-size: 20px;
+}
+
+.lines {
+    display: none;
+}
+
+
+/*  --------------  Fitness plan And nutrition Section Ends Here    --------------- */
+
+
+
+/*  --------------    Subscription plan  Section Starts Here     ----------------  */
+
+.subscribe {
+
+    top: 800px;
+    display: block;
+    height: 580px;
+    padding-left: 0;
+    background-size: cover;
+}
+
+.subscribe div {
+    width: 220px;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 110px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.subscribe p {
+    display: none;
+}
+
+.one {
+    font-size: 24px;
+    padding-left: 80px;
+}
+
+.two {
+    font-size: 24px;
+    padding-left: 40px;
+}
+
+.three {
+    font-size: 24px;
+    padding-left: 60px;
+}
+
+.subscribe h3 {
+    font-size: 23px;
+    padding-top: 0px;
+    padding-left: 45px;
+}
+
+.subscribe h4 {
+    font-size: 22px;
+    padding-top: 5px;
+    padding-left: 50px;
+}
+
+.subscribe h5 {
+    font-size: 22px;
+    padding-top: 0px;
+    padding-left: 50px;
+}
+
+.plan-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+/*  --------------    Subscription plan  Section Ends Here     ----------------  */
+
+
+
+/*  --------------    Fitness Club  Section Start Here     ----------------  */
+
+.club {
+    top: 1380px;
+    height: 200px;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.club-bg {
+    margin-top: 1050px;
+    height: 270px;
+    width: 100%;
+}
+
+.middle {
+    display: block;
+    margin-top: 130px;
+    height: 320px;
+    width: 60%;
+    margin-left: 100px;
+    background: #fff;
+}
+
+.fitness-div {
+    width: 100%;
+    padding-left: 40px;
+    gap: 0;
+}
+
+.fitness-div img {
+    width: 50px;
+    height: 50px;
+}
+
+.fitness-div h1 {
+    font-size: 20px;
+}
+
+.fitness-div p {
+    font-size: 10px;
+}
+
+/*  --------------    Fitness Club  Section End  Here     ----------------  */
+
+
+
+/*  --------------    Fitness Club  Section End  Here     ----------------  */
+
+.story {
+    height: 400px;
+}
+
+.story h1 {
+    font-size: 30px;
+    padding-left: 120px;
+    padding-top: 5px;
+}
+
+.story-container {
+    display: block;
+    margin-left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 320px;
+}
+
+.story-container img {
+    padding-top: 20px;
+    width: 150px;
+    height: 150px;
+    padding-left: 60px;
+    border-radius: 12px;
+}
+
+.hide {
+    display: none;
+}
+
+.story-container p {
+    font-size: 15px;
+    float: right;
+    padding-right: 40px;
+    padding-top: 60px;
+    text-align: left;
+
+}
+
+/*  --------------    Fitness Club  Section End  Here     ----------------  */
+
+.footer {
+    height: 422px;
+
+}
+
+.footer-items {
+    display: block;
+    padding: 0px 0px;
+    margin-right: 40px;
+}
+
+.priotrize-class {
+    width: 100%;
+    height: 120px;
+    margin-top: 0;
+    gap: 0;
+}
+
+.priotrize-class img {
+    width: 125px;
+    height: 70px;
+    flex-shrink: 0;
+
+}
+
+.priotrize-class p {
+    font-size: 16px;
+    padding-top: 0;
+}
+
+.company-info {
+    gap: 10px;
+}
+
+.company-info h3 {
+    display: none;
+}
+
+.company-info p {
+    font-size: 18px;
+}
+
+.more-info p {
+    display: none;
+}
+
+.popular-items {
+    gap: 5px;
+}
+
+.popular-items h3 {
+    padding-left: 50px;
+    font-size: 20px;
+    width: 190px;
+}
+
+.info {
+    margin-left: 40px;
+}
+
+.footer-info {
+    padding-top: 10px;
+}
+
+.more-info h6 {
+    display: block;
+    color: #FFF;
+    font-family: "Radio Canada";
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.contact-info {
+    display: none;
+}
+
+.more-info h3 {
+    display: none;
+}
+
+.pro {
+    display: none;
+}
+
+
+.terms {
+    display: none;
+}
+
+.tag-content {
+    width: 425px;
+    flex-direction: column;
+}
+
+.tag-items {
+    padding-left: 20px;
+}
+
+.tag-items div {
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+}
+
+.tag-items .workout {
+    display: none;
+}
+
+.tag-items .abs {
+    display: none;
+}
+
+.tag-items .facilities {
+    display: none;
+}
+
+.tag-items .work {
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding-top: 8px;
+    padding-left: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFA500;
+}
+
+.tag-items .run {
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding-top: 8px;
+    padding-left: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFA500;
+}
+
+.tag-items .fac {
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding-top: 8px;
+    padding-left: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFA500;
+}
+.copyright {
+    display: block;
+    height: 40px;
+}
+
+.copyright p
+{
+    display: none;
+}
+.copyright h5 {
+    display: block;
+    color: #000;
+    font-family: "Radio Canada";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-left: 80px;
+    padding-top: 10px;
+}
+
+}
